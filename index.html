@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>agentix - PrebuiltUI</title>
 		<link rel="stylesheet" href="./output.css" />
 		<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>
 
 	<body>
@@ -23,25 +24,33 @@
 			</a>
 			<div class="hidden lg:flex items-center gap-8 transition duration-500">
 				<a href="#creations" class="hover:text-slate-300 transition">
-					Creations
+					Proyectos
 				</a>
-				<a href="#about" class="hover:text-slate-300 transition"> About </a>
+				<a href="#about" class="hover:text-slate-300 transition">
+					Sobre Nosotros
+				</a>
 				<a href="#testimonials" class="hover:text-slate-300 transition">
-					Testimonials
+					Reseñas
 				</a>
-				<a href="#contact" class="hover:text-slate-300 transition"> Contact </a>
+				<a href="#contact" class="hover:text-slate-300 transition">
+					Contacto
+				</a>
 			</div>
 			<div class="hidden lg:block space-x-3">
-				<button
-					class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md active:scale-95"
-				>
-					Get started
-				</button>
-				<button
-					class="hover:bg-slate-300/20 transition px-6 py-2 border border-slate-400 rounded-md active:scale-95"
-				>
-					Login
-				</button>
+				<a href="#">
+					<button
+						class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md active:scale-95"
+					>
+						Contactar
+					</button>
+				</a>
+				<a href="#">
+					<button
+						class="hover:bg-slate-300/20 transition px-6 py-2 border border-slate-400 rounded-md active:scale-95"
+					>
+						Saber mas
+					</button>
+				</a>
 			</div>
 			<button class="lg:hidden active:scale-90 transition" id="menu-button">
 				<svg
@@ -68,10 +77,10 @@
 			id="nav-links"
 			class="fixed inset-0 z-[100] bg-black/60 backdrop-blur flex flex-col items-center justify-center text-lg gap-8 lg:hidden transition-transform duration-400 -translate-x-full"
 		>
-			<a href="/#creations"> Creations </a>
-			<a href="/#about"> About </a>
-			<a href="/#testimonials"> Testimonials </a>
-			<a href="/#contact"> Contact </a>
+			<a href="/#creations"> Proyectos </a>
+			<a href="/#about"> Sobre Nosotros </a>
+			<a href="/#testimonials"> Reseñas </a>
+			<a href="/#contact"> Contacto </a>
 			<button
 				id="close-menu"
 				class="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-slate-100 hover:bg-slate-200 transition text-black rounded-md flex"
@@ -131,22 +140,23 @@
 				class="flex items-center mt-48 gap-2 border border-slate-600 text-gray-50 rounded-full px-4 py-2"
 			>
 				<div class="size-2.5 bg-green-500 rounded-full animate-pulse"></div>
-				<span>Book a live demo today</span>
+				<span>Te ofrecemos lo mejor </span>
 			</a>
 			<h1
 				class="text-center text-5xl leading-[68px] md:text-6xl md:leading-[70px] mt-4 font-semibold max-w-2xl"
 			>
-				Let's build AI agents together
+				Creamos tu pagina web a medida
 			</h1>
 			<p class="text-center text-base max-w-lg mt-2">
-				Our platform helps you build, test, and deliver faster — so you can
-				focus on what matters.
+				Creamos tus pagina web a medida, para que tenga tu toque único y
+				sencillo, también tenemos servicios complementarios disponibles, para
+				que no tengas que preocuparte por todo
 			</p>
 			<div class="flex items-center gap-4 mt-8">
 				<button
 					class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 transition text-white active:scale-95 rounded-lg px-7 h-11"
 				>
-					Get started
+					Realizar Pedido
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -167,7 +177,7 @@
 				<button
 					class="border border-slate-400 active:scale-95 hover:bg-white/10 transition rounded-lg px-8 h-11"
 				>
-					Book a demo
+					Saber mas
 				</button>
 			</div>
 			<figure
@@ -187,70 +197,43 @@
 		<section class="flex flex-col items-center" id="creations">
 			<div class="flex flex-col items-center mt-32">
 				<h2 class="text-center text-4xl font-semibold max-w-2xl">
-					Our latest
+					Últimos
 					<span
 						class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat"
-						>creation</span
+						>Proyectos</span
 					>
 				</h2>
 				<p class="text-center text-slate-400 max-w-lg mt-3">
-					A visual collection of our most recent works - each piece crafted with
-					intention, emotion, and style.
+					una colección de los proyectos terminados y con soluciones concretas,
+					si quieres saber mas acerca de los proyectos te invito a que hagas
+					click en este
+					<a
+						href="https://github.com/miush-env"
+						class="border-b border-b-slate-400"
+						>enlace</a
+					>
+					para ver mis repos
 				</p>
 			</div>
-			<div class="flex items-center gap-4 h-100 w-full max-w-5xl mt-18 mx-auto">
-				<div
-					class="relative group flex-grow h-[400px] rounded-xl overflow-hidden hover:w-full w-56 transition-all duration-500"
-				>
-					<img
-						class="h-full w-full object-cover object-center"
-						alt="Prompt engineers"
-						src="https://images.unsplash.com/photo-1543269865-0a740d43b90c?q=80&amp;w=800&amp;h=400&amp;auto=format&amp;fit=crop"
-					/>
-					<div
-						class="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 transition-all duration-300 opacity-0 group-hover:opacity-100"
-					>
-						<h1 class="text-3xl font-semibold">Prompt engineers</h1>
-						<p class="text-sm mt-2">
-							Bridging the gap between human intent and machine understanding
-							through expert prompt design.
-						</p>
-					</div>
-				</div>
-				<div
-					class="relative group flex-grow h-[400px] rounded-xl overflow-hidden hover:w-full w-56 transition-all duration-500"
-				>
-					<img
-						class="h-full w-full object-cover object-right"
-						alt="Data scientists"
-						src="https://images.unsplash.com/photo-1714976326351-0ecf0244f0fc?q=80&amp;w=800&amp;h=400&amp;auto=format&amp;fit=crop"
-					/>
-					<div
-						class="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 transition-all duration-300 opacity-0 group-hover:opacity-100"
-					>
-						<h1 class="text-3xl font-semibold">Data scientists</h1>
-						<p class="text-sm mt-2">
-							Turning data into actionable insights that drive intelligent
-							innovation and growth.
-						</p>
-					</div>
-				</div>
-				<div
-					class="relative group flex-grow h-[400px] rounded-xl overflow-hidden hover:w-full w-56 transition-all duration-500"
-				>
-					<img
-						class="h-full w-full object-cover object-center"
-						alt="Software engineers"
-						src="https://images.unsplash.com/photo-1736220690062-79e12ca75262?q=80&amp;w=800&amp;h=400&amp;auto=format&amp;fit=crop"
-					/>
-					<div
-						class="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 transition-all duration-300 opacity-0 group-hover:opacity-100"
-					>
-						<h1 class="text-3xl font-semibold">Software engineers</h1>
-						<p class="text-sm mt-2">
-							Building scalable and efficient systems that bring ideas to life
-							through code.
-						</p>
+			<div
+				class="flex overflow-hidden items-center gap-4 h-100 w-full max-w-screen px-10 mt-18"
+			>
+				<div id="carrouselTrack" class="flex items-center gap-4">
+					<div class="relative h-[400px] group rounded-xl overflow-hidden w-80">
+						<img
+							class="h-full w-full group-hover:blur-sm object-cover object-center transition-all duration-300 delay-150"
+							alt="Prompt engineers"
+							src="https://images.unsplash.com/photo-1543269865-0a740d43b90c?q=80&amp;w=800&amp;h=400&amp;auto=format&amp;fit=crop"
+						/>
+						<div
+							class="absolute inset-0 flex group-hover:opacity-100 opacity-0 transition-opacity flex-col justify-end p-10 text-white bg-black/50 duration-300 delay-150"
+						>
+							<h1 class="text-3xl font-semibold">Prompt engineers</h1>
+							<p class="text-sm mt-2">
+								Bridging the gap between human intent and machine understanding
+								through expert prompt design.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

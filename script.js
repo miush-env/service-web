@@ -103,3 +103,64 @@ function initCarousel() {
 }
 
 document.addEventListener("DOMContentLoaded", initCarousel);
+// --==----===----------
+  const track = document.getElementById("carouselTrack");
+  const items = Array.from(track.children);
+
+  let index = 0;
+  let autoPlay;
+  let paused = false;
+  let manualPause = false;
+
+  const gap = 16; // gap-4 = 16px
+
+  // Clonamos elementos para infinito real
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  function getItemWidth() {
+    return items[0].offsetWidth + gap;
+  }
+
+  function move() {
+    if (paused) return;
+
+    index++;
+    track.style.transition = "transform 700ms ease";
+    track.style.transform = `translateX(-${index * getItemWidth()}px)`;
+
+    if (index >= items.length) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = `translateX(0px)`;
+      }, 700);
+    }
+  }
+
+  function start() {
+    autoPlay = setInterval(move, 2500);
+  }
+
+  function stop() {
+    clearInterval(autoPlay);
+  }
+
+  // Hover pausa (desktop)
+  track.addEventListener("mouseenter", () => {
+    if (!manualPause) paused = true;
+  });
+
+  track.addEventListener("mouseleave", () => {
+    if (!manualPause) paused = false;
+  });
+
+  // Click / tap pausa toggle (mobile friendly)
+  track.addEventListener("click", () => {
+    manualPause = !manualPause;
+    paused = manualPause;
+  });
+
+  start();
