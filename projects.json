@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+      "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=450&fit=crop",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "title": "Dashboard Analytics",
+      "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "title": "Mobile App Design",
+      "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+      "link": "#"
+    },
+    {
+      "id": 4,
+      "title": "Portfolio Website",
+      "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+      "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop",
+      "link": "https://youtube.com"
+    },
+    {
+      "id": 5,
+      "title": "Blog Platform",
+      "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=450&fit=crop",
+      "link": "#"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+const menuButton = document.getElementById("menu-button");
+const navLinks = document.getElementById("nav-links");
+const closeMenu = document.getElementById("close-menu");
+
+// abrir menú
+menuButton.addEventListener("click", () => {
+  navLinks.classList.remove("-translate-x-full");
+  navLinks.classList.add("translate-x-0");
+});
+
+// cerrar menú (botón)
+closeMenu.addEventListener("click", () => {
+  closeNav();
+});
+
+// cerrar menú al hacer click en un link
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    closeNav();
+  });
+});
+
+// función reutilizable
+function closeNav() {
+  navLinks.classList.remove("translate-x-0");
+  navLinks.classList.add("-translate-x-full");
+}
+
+const projects = [
+  {
+    id: 1,
+    title: "E-commerce Platform",
+    description: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=450&fit=crop",
+    link: "#"
+  },
+  {
+    id: 2,
+    title: "Dashboard Analytics",
+    description: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+    link: "#"
+  },
+  {
+    id: 3,
+    title: "Mobile App Design",
+    description: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+    link: "#"
+  },
+  {
+    id: 4,
+    title: "Portfolio Website",
+    description: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop",
+    link: "https://youtube.com"
+  },
+  {
+    id: 5,
+    title: "Blog Platform",
+    description: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti placeat esse vel! <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium soluta, deserunt iste</p> <ul class='list-disc px-5'> <li>Landing Page</li> <li>Marketing</li> <li>SEO</li> <li>4 meses</li> </ul>",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=450&fit=crop",
+    link: "#"
+  }
+];
+// Función para crear una tarjeta de proyecto
+function createProjectCard(project) {
+  const card = document.createElement("div");
+  card.className =
+    "carousel-item flex-shrink-0 w-80 h-48 md:w-96 bg-blue-200 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-[0_6px_18px_rgba(168,85,247,0.35)] duration-300";
+
+  card.innerHTML = `
+    <div class="aspect-video w-full overflow-hidden bg-gray-200">
+      <img 
+        src="${project.image}" 
+        alt="${project.title}"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  `;
+
+  card.addEventListener("click", () => {
+    console.log(project.id);
+    window.location.href = `proyectPage.html?id=${project.id}`;
+  });
+
+  return card;
+}
+
+function initCarousel() {
+  const track = document.getElementById("carouselTrack");
+  if (!track) return;
+
+  if (!projects.length) return;
+
+  // duplicamos para efecto infinito
+  const duplicatedProjects = [...projects, ...projects];
+
+  duplicatedProjects.forEach(project => {
+    const card = createProjectCard(project);
+    track.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initCarousel);
