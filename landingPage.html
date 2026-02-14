@@ -11,54 +11,45 @@
 	</head>
 
 	<body>
-		<div class="bg-indigo-600 sticky top-0 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
-			<div class="flex items-center gap-5 ">
-				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alarm">
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<path d="M16 6.072a8 8 0 1 1 -11.995 7.213l-.005 -.285l.005 -.285a8 8 0 0 1 11.995 -6.643zm-4 2.928a1 1 0 0 0 -1 1v3l.007 .117a1 1 0 0 0 .993 .883h2l.117 -.007a1 1 0 0 0 .883 -.993l-.007 -.117a1 1 0 0 0 -.993 -.883h-1v-2l-.007 -.117a1 1 0 0 0 -.993 -.883z"/>
-					<path d="M6.412 3.191a1 1 0 0 1 1.273 1.539l-.097 .08l-2.75 2a1 1 0 0 1 -1.273 -1.54l.097 -.08l2.75 -2z"/>
-					<path d="M16.191 3.412a1 1 0 0 1 1.291 -.288l.106 .067l2.75 2a1 1 0 0 1 -1.07 1.685l-.106 -.067l-2.75 -2a1 1 0 0 1 -.22 -1.397z"/>
-				</svg>
-				<span id="counter" class=" md:text-xs lg:text-5xl font-bold text-white transition-all duration-500 ease-in-out opacity-100"></span>
-			</div>
 
-			<div>
-				<span class="text-lg md:text-sm">🎉🎊 Aprovecha de beneficios exclusivos antes de que se termine la oferta
-					⏱</span>
-			</div>
+		<div class="bg-indigo-600 lg:sticky top-0 z-50 ">
 
-			<div>
-				<a class="uppercase px-6 py-2 bg-indigo-900 hover:bg-indigo-800 transition text-white rounded-md active:scale-95" href="">Enviar mensaje</a>
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-3">
+
+				<div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+					<!-- IZQUIERDA (Icono + contador) -->
+					<div class="flex items-center gap-3">
+
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-10 md:h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+							<path d="M16 6.072a8 8 0 1 1 -11.995 7.213l-.005 -.285l.005 -.285a8 8 0 0 1 11.995 -6.643zm-4 2.928a1 1 0 0 0 -1 1v3h2v-2z"/>
+						</svg>
+
+						<span id="counter" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white transition-all duration-500">
+						</span>
+					</div>
+
+					<!-- CENTRO (Mensaje) -->
+					<div class="text-center md:text-left">
+						<span id="message" class="text-sm sm:text-base md:text-lg text-white leading-snug">
+							🎉 Aprovecha beneficios exclusivos antes de que se termine la oferta ⏱
+						</span>
+					</div>
+
+					<!-- DERECHA (Botón) -->
+					<div>
+						<a href="#" class="inline-block uppercase px-4 sm:px-6 py-2 text-sm sm:text-base
+        bg-indigo-900 hover:bg-indigo-800
+        transition text-white rounded-md active:scale-95 whitespace-nowrap">
+							Enviar mensaje
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<script>
-			let time = 10; // ⏱ Cambia aquí el tiempo inicial
-			const counter = document.getElementById("counter");
-			
-			counter.textContent = time;
-			
-			const interval = setInterval(() => {
-				if (time <= 0) {
-					interval()
-				}
-				
-				// Fade out
-				counter.classList.remove("opacity-100");
-				counter.classList.add("opacity-0", "translate-y-2");
-				
-				setTimeout(() => {
-					time--;
-					counter.textContent = time;
-					
-					// Fade in
-					counter.classList.remove("opacity-0", "translate-y-2");
-					counter.classList.add("opacity-100");
-					}, 250);
-					
-					}, 1000);
-		</script>
-		<nav class="sticky top-16 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
+		<nav class="sticky top-0 lg:top-16 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
 			<a href="#!">
 				<img class="h-9 w-auto" width="138" height="36" alt="logo" src="./assets/logo.svg">
 			</a>
@@ -123,7 +114,7 @@
 		<section class="flex flex-col items-center" id="about">
 			<div class="flex flex-col items-center mt-32">
 				<h2 class="text-center text-4xl font-semibold max-w-2xl">
-					Sobre nuestras
+					Sobre nuestros
 					<span class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">Proyectos</span>
 				</h2>
 				<p class="text-center text-slate-400 max-w-lg mt-3">
@@ -183,11 +174,11 @@
 					Lee nuestras
 					<span class="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">Reseñas</span>
 				</h2>
-				<p class="text-center text-slate-400 max-w-lg mt-3">
+				<p class="text-center text-slate-400 px-4 max-w-lg mt-3">
 					Aqui veras un banco de opinion que nos brindaron cada uno de nuestros clientes al contratar nuestro servicio
 				</p>
 			</div>
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-18 max-w-6xl mx-auto">
+			<div class="grid grid-cols-1 px-4 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-18 max-w-6xl mx-auto">
 				<div class="group flex flex-col justify-between border border-slate-800 p-6 rounded-xl">
 					<p class="text-slate-100 text-base">
 						Me gustaron mucho los componentes que diseñas y siempre estan abiertos a cambio de ultimo momento algo que
@@ -362,7 +353,7 @@
 					intention, emotion, and style.
 				</p>
 			</div>
-			<form action="https://formsubmit.co/350b7dc13efe4bc21484dcd047494b86" method="POST" class="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-3xl mx-auto text-slate-400 mt-16 w-full">
+			<form action="https://formsubmit.co/350b7dc13efe4bc21484dcd047494b86" method="POST" class="grid sm:grid-cols-2 gap-3 px-3 sm:gap-5 max-w-3xl mx-auto text-slate-400 mt-16 w-full">
 				<div>
 					<label class="font-medium text-slate-200">
 						Nombre Completo
@@ -393,7 +384,7 @@
 		</section>
 
 		<!-- Subscribe Section -->
-		<section class="flex flex-col items-center">
+		<section class="flex flex-col px-3 items-center">
 			<div class="flex flex-col items-center mt-32">
 				<h2 class="text-center text-4xl font-semibold max-w-2xl">
 					Quiero ser parte del
@@ -406,7 +397,7 @@
 			<form action="https://formsubmit.co/350b7dc13efe4bc21484dcd047494b86" method="POST" class="flex items-center justify-center mt-10 border border-slate-700 focus-within:outline focus-within:outline-indigo-600 text-sm rounded-full h-14 max-w-xl w-full">
 				<input class="bg-transparent outline-none rounded-full px-4 h-full flex-1 placeholder:text-slate-400" placeholder="Introduzca su correo electronico" type="text">
 				<button class="bg-indigo-600 text-white rounded-full h-11 mr-1 px-10 flex items-center justify-center hover:bg-indigo-700 active:scale-95 transition">
-					Enviar CV
+					Enviar
 				</button>
 				<input type="hidden" name="_next" value="http://localhost:5173/#contact">
 				<input type="hidden" name="_captcha" value="false">
@@ -467,5 +458,71 @@
 			</p>
 		</footer>
 		<script src="./script.js"></script>
+		<script>
+			const INITIAL_TIME = 2800;
+			const RESTART_DELAY = 900000;
+			
+			let timeLeft = INITIAL_TIME;
+			let intervalId = null;
+			
+			const countdownEl = document.getElementById("counter");
+			const messageEl = document.getElementById("message");
+			
+			function formatTime(totalSeconds) {
+				const hours = Math.floor(totalSeconds / 3600);
+				const minutes = Math.floor((totalSeconds % 3600) / 60);
+				const seconds = totalSeconds % 60;
+				
+				return `
+				${hours.toString().padStart(2, "0")} :
+				${minutes.toString().padStart(2, "0")} :
+				${seconds.toString().padStart(2, "0")}
+				`;
+			}
+			
+			function updateUI() {
+				countdownEl.textContent = formatTime(timeLeft);
+			}
+			
+			function startCountdown() {
+				if (intervalId) return;
+				
+				updateUI();
+				
+				intervalId = setInterval(() => {
+					timeLeft--;
+					updateUI();
+					
+					if (timeLeft <= 0) {
+						stopCountdown();
+						handleFinish();
+					}
+					}, 1000);
+				}
+				
+				function stopCountdown() {
+					clearInterval(intervalId);
+					intervalId = null;
+				}
+				
+				function handleFinish() {
+					messageEl.textContent = "Oferta finalizada 🔥";
+					countdownEl.classList.add("text-gray-500");
+					
+					setTimeout(resetCountdown, RESTART_DELAY);
+				}
+				
+				function resetCountdown() {
+					timeLeft = INITIAL_TIME;
+					messageEl.textContent =
+					"🎉 Aprovecha beneficios exclusivos antes de que se termine la oferta ⏱";
+					
+					countdownEl.classList.remove("text-gray-500");
+					
+					startCountdown();
+				}
+				
+				startCountdown();
+		</script>
 	</body>
 </html>
