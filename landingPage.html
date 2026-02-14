@@ -11,7 +11,54 @@
 	</head>
 
 	<body>
-		<nav class="sticky top-0 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
+		<div class="bg-indigo-600 sticky top-0 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
+			<div class="flex items-center gap-5 ">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alarm">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<path d="M16 6.072a8 8 0 1 1 -11.995 7.213l-.005 -.285l.005 -.285a8 8 0 0 1 11.995 -6.643zm-4 2.928a1 1 0 0 0 -1 1v3l.007 .117a1 1 0 0 0 .993 .883h2l.117 -.007a1 1 0 0 0 .883 -.993l-.007 -.117a1 1 0 0 0 -.993 -.883h-1v-2l-.007 -.117a1 1 0 0 0 -.993 -.883z"/>
+					<path d="M6.412 3.191a1 1 0 0 1 1.273 1.539l-.097 .08l-2.75 2a1 1 0 0 1 -1.273 -1.54l.097 -.08l2.75 -2z"/>
+					<path d="M16.191 3.412a1 1 0 0 1 1.291 -.288l.106 .067l2.75 2a1 1 0 0 1 -1.07 1.685l-.106 -.067l-2.75 -2a1 1 0 0 1 -.22 -1.397z"/>
+				</svg>
+				<span id="counter" class=" md:text-xs lg:text-5xl font-bold text-white transition-all duration-500 ease-in-out opacity-100"></span>
+			</div>
+
+			<div>
+				<span class="text-lg md:text-sm">🎉🎊 Aprovecha de beneficios exclusivos antes de que se termine la oferta
+					⏱</span>
+			</div>
+
+			<div>
+				<a class="uppercase px-6 py-2 bg-indigo-900 hover:bg-indigo-800 transition text-white rounded-md active:scale-95" href="">Enviar mensaje</a>
+			</div>
+		</div>
+
+		<script>
+			let time = 10; // ⏱ Cambia aquí el tiempo inicial
+			const counter = document.getElementById("counter");
+			
+			counter.textContent = time;
+			
+			const interval = setInterval(() => {
+				if (time <= 0) {
+					interval()
+				}
+				
+				// Fade out
+				counter.classList.remove("opacity-100");
+				counter.classList.add("opacity-0", "translate-y-2");
+				
+				setTimeout(() => {
+					time--;
+					counter.textContent = time;
+					
+					// Fade in
+					counter.classList.remove("opacity-0", "translate-y-2");
+					counter.classList.add("opacity-100");
+					}, 250);
+					
+					}, 1000);
+		</script>
+		<nav class="sticky top-16 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
 			<a href="#!">
 				<img class="h-9 w-auto" width="138" height="36" alt="logo" src="./assets/logo.svg">
 			</a>
