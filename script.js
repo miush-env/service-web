@@ -104,63 +104,90 @@ function initCarousel() {
 
 document.addEventListener("DOMContentLoaded", initCarousel);
 // --==----===----------
-  const track = document.getElementById("carouselTrack");
-  const items = Array.from(track.children);
+const track = document.getElementById("carouselTrack");
+const items = Array.from(track.children);
 
-  let index = 0;
-  let autoPlay;
-  let paused = false;
-  let manualPause = false;
+let index = 0;
+let autoPlay;
+let paused = false;
+let manualPause = false;
 
-  const gap = 16; // gap-4 = 16px
+const gap = 16; // gap-4 = 16px
 
-  // Clonamos elementos para infinito real
-  items.forEach(item => {
-    const clone = item.cloneNode(true);
-    track.appendChild(clone);
-  });
+// Clonamos elementos para infinito real
+items.forEach(item => {
+  const clone = item.cloneNode(true);
+  track.appendChild(clone);
+});
 
-  function getItemWidth() {
-    return items[0].offsetWidth + gap;
+function getItemWidth() {
+  return items[0].offsetWidth + gap;
+}
+
+function move() {
+  if (paused) return;
+
+  index++;
+  track.style.transition = "transform 700ms ease";
+  track.style.transform = `translateX(-${index * getItemWidth()}px)`;
+
+  if (index >= items.length) {
+    setTimeout(() => {
+      track.style.transition = "none";
+      index = 0;
+      track.style.transform = `translateX(0px)`;
+    }, 700);
+  }
+}
+
+function start() {
+  autoPlay = setInterval(move, 2500);
+}
+
+function stop() {
+  clearInterval(autoPlay);
+}
+
+// Hover pausa (desktop)
+track.addEventListener("mouseenter", () => {
+  if (!manualPause) paused = true;
+});
+
+track.addEventListener("mouseleave", () => {
+  if (!manualPause) paused = false;
+});
+
+// Click / tap pausa toggle (mobile friendly)
+track.addEventListener("click", () => {
+  manualPause = !manualPause;
+  paused = manualPause;
+});
+
+start();
+
+let time = 10; // ⏱ Cambia aquí el tiempo inicial
+const counter = document.getElementById("counter");
+
+counter.textContent = time;
+
+const interval = setInterval(() => {
+  if (time <= 0) {
+    clearInterval(interval);
+    counter.textContent = "¡Fin!";
+    return;
   }
 
-  function move() {
-    if (paused) return;
+  // Fade out
+  counter.classList.remove("opacity-100");
+  counter.classList.add("opacity-0", "translate-y-2");
 
-    index++;
-    track.style.transition = "transform 700ms ease";
-    track.style.transform = `translateX(-${index * getItemWidth()}px)`;
+  setTimeout(() => {
+    time--;
+    counter.textContent = time;
 
-    if (index >= items.length) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = `translateX(0px)`;
-      }, 700);
-    }
-  }
+    // Fade in
+    counter.classList.remove("opacity-0", "translate-y-2");
+    counter.classList.add("opacity-100");
+  }, 250);
 
-  function start() {
-    autoPlay = setInterval(move, 2500);
-  }
-
-  function stop() {
-    clearInterval(autoPlay);
-  }
-
-  // Hover pausa (desktop)
-  track.addEventListener("mouseenter", () => {
-    if (!manualPause) paused = true;
-  });
-
-  track.addEventListener("mouseleave", () => {
-    if (!manualPause) paused = false;
-  });
-
-  // Click / tap pausa toggle (mobile friendly)
-  track.addEventListener("click", () => {
-    manualPause = !manualPause;
-    paused = manualPause;
-  });
-
-  start();
+}, 1000);
