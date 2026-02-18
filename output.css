@@ -2120,3 +2120,24 @@ button {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.container {
+  perspective: 70rem;
+}
+
+#project-image {
+  width: 45rem;
+  border-radius: 10px;
+  transform: rotateY(-20deg);
+  box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+  transition: transform .5s .15s ease;
+}
+
+#project-image:hover {
+
+  transform: rotateY(0deg);
+}
+
+#circle-rotate {
+  backdrop-filter: blur(20px);
+}
