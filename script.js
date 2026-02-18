@@ -64,18 +64,31 @@ const projects = [
   }
 ];
 // Función para crear una tarjeta de proyecto
+// Función para crear una tarjeta de proyecto
 function createProjectCard(project) {
   const card = document.createElement("div");
-  card.className =
-    "carousel-item flex-shrink-0 w-80 h-48 md:w-96 bg-blue-200 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-[0_6px_18px_rgba(168,85,247,0.35)] duration-300";
+  // Diseño premium: h-[400px], w-80, rounded-xl, overflow-hidden
+  card.className = "relative h-[400px] group rounded-xl overflow-hidden w-80 flex-shrink-0 cursor-pointer";
+
+  // Extraemos texto simple de la descripción (quitando tags HTML)
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = project.description;
+  const textDescription = tempDiv.textContent || tempDiv.innerText || "";
+  const shortDescription = textDescription.length > 80 ? textDescription.substring(0, 80) + "..." : textDescription;
 
   card.innerHTML = `
-    <div class="aspect-video w-full overflow-hidden bg-gray-200">
-      <img 
-        src="${project.image}" 
-        alt="${project.title}"
-        class="w-full h-full object-cover"
-      />
+    <img
+      class="h-full w-full group-hover:blur-sm object-cover object-center transition-all duration-300 delay-150"
+      alt="${project.title}"
+      src="${project.image}"
+    />
+    <div
+      class="absolute inset-0 flex group-hover:opacity-100 opacity-0 transition-opacity flex-col justify-end p-10 text-white bg-black/50 duration-300 delay-150"
+    >
+      <h1 class="text-2xl font-semibold">${project.title}</h1>
+      <p class="text-sm mt-2">
+        ${shortDescription}
+      </p>
     </div>
   `;
 
@@ -88,106 +101,30 @@ function createProjectCard(project) {
 }
 
 function initCarousel() {
-  const track = document.getElementById("carouselTrack");
+  const track = document.getElementById("carrouselTrack"); // Fixed ID to match HTML
   if (!track) return;
 
   if (!projects.length) return;
 
-  // duplicamos para efecto infinito
+  // Duplicamos los proyectos para lograr el efecto infinito
+  // Al tener dos sets, podemos animar del 0% al -50% y resetear visualmente sin que se note
   const duplicatedProjects = [...projects, ...projects];
 
   duplicatedProjects.forEach(project => {
     const card = createProjectCard(project);
     track.appendChild(card);
   });
+  
+  // Añadimos la clase de animación definida en input.css
+  track.classList.add("animate-scroll");
+  
+  // Añadimos padding-right igual al gap (gap-4 = 1rem) para que la animación sea perfecta
+  // Total width = 2 * (Width + Gap)
+  track.classList.add("pr-4");
+
+  
+  // Aseguramos que el contenedor padre tenga overflow-hidden (ya lo tiene en HTML, pero por seguridad)
+  track.parentElement.classList.add("overflow-hidden");
 }
 
 document.addEventListener("DOMContentLoaded", initCarousel);
-// --==----===----------
-const track = document.getElementById("carouselTrack");
-const items = Array.from(track.children);
-
-let index = 0;
-let autoPlay;
-let paused = false;
-let manualPause = false;
-
-const gap = 16; // gap-4 = 16px
-
-// Clonamos elementos para infinito real
-items.forEach(item => {
-  const clone = item.cloneNode(true);
-  track.appendChild(clone);
-});
-
-function getItemWidth() {
-  return items[0].offsetWidth + gap;
-}
-
-function move() {
-  if (paused) return;
-
-  index++;
-  track.style.transition = "transform 700ms ease";
-  track.style.transform = `translateX(-${index * getItemWidth()}px)`;
-
-  if (index >= items.length) {
-    setTimeout(() => {
-      track.style.transition = "none";
-      index = 0;
-      track.style.transform = `translateX(0px)`;
-    }, 700);
-  }
-}
-
-function start() {
-  autoPlay = setInterval(move, 2500);
-}
-
-function stop() {
-  clearInterval(autoPlay);
-}
-
-// Hover pausa (desktop)
-track.addEventListener("mouseenter", () => {
-  if (!manualPause) paused = true;
-});
-
-track.addEventListener("mouseleave", () => {
-  if (!manualPause) paused = false;
-});
-
-// Click / tap pausa toggle (mobile friendly)
-track.addEventListener("click", () => {
-  manualPause = !manualPause;
-  paused = manualPause;
-});
-
-start();
-
-let time = 10; // ⏱ Cambia aquí el tiempo inicial
-const counter = document.getElementById("counter");
-
-counter.textContent = time;
-
-const interval = setInterval(() => {
-  if (time <= 0) {
-    clearInterval(interval);
-    counter.textContent = "¡Fin!";
-    return;
-  }
-
-  // Fade out
-  counter.classList.remove("opacity-100");
-  counter.classList.add("opacity-0", "translate-y-2");
-
-  setTimeout(() => {
-    time--;
-    counter.textContent = time;
-
-    // Fade in
-    counter.classList.remove("opacity-0", "translate-y-2");
-    counter.classList.add("opacity-100");
-  }, 250);
-
-}, 1000);
