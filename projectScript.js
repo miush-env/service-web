@@ -1,3 +1,27 @@
+// Menu Logic (Duplicated from script.js for independence)
+const menuButton = document.getElementById("menu-button");
+const navLinks = document.getElementById("nav-links");
+const closeMenu = document.getElementById("close-menu");
+
+if (menuButton && navLinks && closeMenu) {
+  menuButton.addEventListener("click", () => {
+    navLinks.classList.remove("-translate-x-full");
+    navLinks.classList.add("translate-x-0");
+  });
+
+  closeMenu.addEventListener("click", closeNav);
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeNav);
+  });
+
+  function closeNav() {
+    navLinks.classList.remove("translate-x-0");
+    navLinks.classList.add("-translate-x-full");
+  }
+}
+
+// Data Handling
 const getData = async (url) => {
   try {
     const response = await fetch(url);
@@ -15,7 +39,6 @@ const getData = async (url) => {
 
 const SERVICE_URL = "./projects.json"
 
-
 // Obtener id desde la URL (?id=1)
 const params = new URLSearchParams(window.location.search);
 const serviceId = Number(params.get("id"));
@@ -31,9 +54,22 @@ getData(SERVICE_URL).then(data => {
   }
 
   console.log("Proyecto seleccionado:", project);
-  document.querySelector('#title').textContent = project.title
-  document.querySelector('#project-name').textContent = project.title
-  document.querySelector('#description-prroject').innerHTML = project.description
-  document.querySelector('#link-view').href = project.link
+  
+  // Populate Data
+  const titleEl = document.querySelector('#title');
+  const projectNameEl = document.querySelector('#project-name');
+  const descriptionEl = document.querySelector('#description-prroject');
+  const linkViewEl = document.querySelector('#link-view');
+  const imageEl = document.querySelector('#project-image');
+
+  if (titleEl) titleEl.textContent = project.title;
+  if (projectNameEl) projectNameEl.textContent = project.title;
+  if (descriptionEl) descriptionEl.innerHTML = project.description;
+  if (linkViewEl) linkViewEl.href = project.link;
+  
+  if (imageEl) {
+    imageEl.src = project.image;
+    imageEl.alt = project.title;
+  }
 });
 
