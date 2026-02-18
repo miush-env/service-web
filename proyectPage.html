@@ -1,28 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title></title>
-		<link rel="stylesheet" href="./output.css">
-		<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="./output.css" />
+		<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>
 
 	<body>
-		<nav class="sticky top-0 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur">
+		<nav
+			class="sticky top-0 z-50 flex items-center justify-between w-full h-18 px-6 md:px-16 lg:px-24 xl:px-32 backdrop-blur"
+		>
 			<a href="index.html">
-				<img class="h-9 w-auto" width="138" height="36" alt="logo" src="./assets/logo.svg">
+				<img
+					class="h-9 w-auto"
+					width="138"
+					height="36"
+					alt="logo"
+					src="./assets/logo.svg"
+				/>
 			</a>
 			<div class="hidden lg:flex items-center gap-8 transition duration-500">
-				<a href="./index.html#creations" class="hover:text-slate-300 transition">
+				<a
+					href="./index.html#creations"
+					class="hover:text-slate-300 transition"
+				>
 					Proyectos
 				</a>
 				<a href="./index.html#about" class="hover:text-slate-300 transition">
 					Servicios
 				</a>
-				<a href=",/index.html#testimonials" class="hover:text-slate-300 transition">
+				<a
+					href=",/index.html#testimonials"
+					class="hover:text-slate-300 transition"
+				>
 					Testimonios
 				</a>
 				<a href="./index.html#contact" class="hover:text-slate-300 transition">
@@ -31,19 +44,35 @@
 			</div>
 			<div class="hidden lg:block space-x-3">
 				<a href="./index.html#contact">
-					<button class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md active:scale-95">
+					<button
+						class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md active:scale-95"
+					>
 						Contactar
 					</button>
 				</a>
 
 				<a href="./index.html#about">
-					<button class="hover:bg-slate-300/20 transition px-6 py-2 border border-slate-400 rounded-md active:scale-95">
+					<button
+						class="hover:bg-slate-300/20 transition px-6 py-2 border border-slate-400 rounded-md active:scale-95"
+					>
 						Saber mas
 					</button>
 				</a>
 			</div>
 			<button class="lg:hidden active:scale-90 transition" id="menu-button">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-6.5" aria-hidden="true">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-menu size-6.5"
+					aria-hidden="true"
+				>
 					<path d="M4 5h16"></path>
 					<path d="M4 12h16"></path>
 					<path d="M4 19h16"></path>
@@ -51,112 +80,164 @@
 			</button>
 		</nav>
 
-		<div id="nav-links" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur flex flex-col items-center justify-center text-lg gap-8 lg:hidden transition-transform duration-400 -translate-x-full">
-			<a href="./index.html#creations">
-				Proyectos
-			</a>
-			<a href="./index.html#about">
-				Servicios
-			</a>
-			<a href="./index.html#testimonials">
-				Testimonios
-			</a>
-			<a href="./index.html#contact">
-				Contacto
-			</a>
-			<button id="close-menu" class="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-slate-100 hover:bg-slate-200 transition text-black rounded-md flex">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true">
+		<div
+			id="nav-links"
+			class="fixed inset-0 z-[100] bg-black/60 backdrop-blur flex flex-col items-center justify-center text-lg gap-8 lg:hidden transition-transform duration-400 -translate-x-full"
+		>
+			<a href="./index.html#creations"> Proyectos </a>
+			<a href="./index.html#about"> Servicios </a>
+			<a href="./index.html#testimonials"> Testimonios </a>
+			<a href="./index.html#contact"> Contacto </a>
+			<button
+				id="close-menu"
+				class="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-slate-100 hover:bg-slate-200 transition text-black rounded-md flex"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-x"
+					aria-hidden="true"
+				>
 					<path d="M18 6 6 18"></path>
 					<path d="m6 6 12 12"></path>
 				</svg>
 			</button>
 		</div>
 
-		<div class="absolute w-full h-screen -z-10 overflow-hidden">
-			<div class="absolute top-56 left-0 -translate-x-1/2
-      w-[32rem] h-[32rem] rounded-full
-      bg-violet-800 opacity-40 blur-3xl">
-			</div>
-			<div class="absolute top-10 right-1/3
-        w-48 h-48 rounded-full
-        bg-fuchsia-600 opacity-30 blur-2xl">
-			</div>
-			<div class="absolute -bottom-24 -right-[20%] -translate-x-1/2
-      w-[32rem] h-[32rem] rounded-full
-      bg-violet-700 opacity-40 blur-3xl">
-			</div>
+		<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+			<div
+				class="absolute top-56 left-0 -translate-x-1/2 w-[32rem] h-[32rem] rounded-full bg-violet-800 opacity-40 blur-3xl"
+			></div>
+			<div
+				class="absolute top-10 right-1/3 w-48 h-48 rounded-full bg-fuchsia-600 opacity-30 blur-2xl"
+			></div>
+			<div
+				class="absolute -bottom-24 -right-[20%] -translate-x-1/2 w-[32rem] h-[32rem] rounded-full bg-violet-700 opacity-40 blur-3xl"
+			></div>
 		</div>
 
-		<main class=" h-screen w-full">
-			<article class="flex h-[20vh] gap-5 flex-col items-center justify-center">
-				<h1 id="title" class="bg-gradient-to-t font-bold uppercase text-6xl from-indigo-600 to-black p-1 bg-left inline-block text-white bg-no-repeat">
-					TItulo a
+		<main class="min-h-screen w-full flex flex-col pt-10">
+			<!-- Title Section -->
+			<article
+				class="flex flex-col items-center justify-center gap-5 px-6 py-10 md:py-20 text-center"
+			>
+				<h1
+					id="title"
+					class="bg-gradient-to-t font-bold uppercase text-4xl sm:text-5xl md:text-6xl from-indigo-600 to-black p-1 bg-left inline-block text-white bg-no-repeat"
+				>
+					Titulo del Proyecto
 				</h1>
-				<p class="w-2xl text-center font-medium text-gray-400 text-balance">Lorem ipsum dolor sit amet consectetur
-					adipisicing elit. Fugit aut ea omnis maxime commodi voluptatem reprehenderit error odio tempora accusantium
-					soluta, deserunt iste
-					quasi earum optio dolores, distinctio aperiam explicabo totam veritatis nam. Eveniet assumenda, nam deleniti
-					placeat esse vel!</p>
+				<p
+					class="max-w-2xl text-center font-medium text-gray-400 text-balance text-sm sm:text-base"
+				>
+					Descubre los detalles de este increíble proyecto diseñado para
+					destacar y funcionar a la perfección.
+				</p>
 			</article>
-			<article class="flex h-[80vh] p-5 py-10">
-				<section class="flex-1 flex flex-col items-start justify-center dflex-col gap-5">
-					<h2 class="text-xl border-b-4 border-violet-900 uppercase w-2/5" id="project-name">Proyecto nombre</h2>
-					<div class="flex gap-3 flex-col text-balance" id="description-prroject">
+
+			<!-- Content Section -->
+			<article
+				class="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 px-6 md:px-16 lg:px-24 xl:px-32 pb-20 max-w-7xl mx-auto w-full"
+			>
+				<!-- Left: Details -->
+				<section class="flex-1 flex flex-col items-start gap-6 w-full">
+					<h2
+						class="text-xl md:text-2xl border-b-4 border-violet-900 uppercase pr-4 pb-2 text-white"
+						id="project-name"
+					>
+						Nombre del Proyecto
+					</h2>
+					<div
+						class="flex gap-4 flex-col text-balance text-gray-300 leading-relaxed text-sm md:text-base w-full"
+						id="description-prroject"
+					>
+						<!-- Description injected via JS -->
 					</div>
-					<a href="#" id="link-view" class="bg-violet-700 text-sm font-semibold text-center rounded-2xl hover:bg-violet-900 hover:text-gray-300 duration-300 delay-150 md:active:bg-violet-900 transition-colors py-2 w-xs">Visitar
-						Sitio</a>
+					<a
+						href="#"
+						id="link-view"
+						target="_blank"
+						class="bg-violet-700 text-white text-sm font-semibold text-center rounded-2xl hover:bg-violet-900 hover:text-gray-100 duration-300 shadow-lg hover:shadow-violet-500/20 active:scale-95 transition-all py-3 px-8 mt-4 w-full sm:w-auto"
+					>
+						Visitar Sitio
+					</a>
 				</section>
-				<section class="flex-1 flex items-center justify-end">
-					<a href="#"></a>
-					<img src="./assets/web-app-manifest-512x512.png" alt="">
+
+				<!-- Right: Image -->
+				<section class="flex-1 flex items-center justify-center w-full ">
+					<div
+						class="relative container w-full max-w-md lg:max-w-full aspect-video rounded-xl overflow-hidden shadow-2xl h-80 p-1"
+					>
+						<img 
+							id="project-image"
+							src=""
+							alt="Project Preview"
+							class="w-full h-full object-cover border border-gray-300"
+						/>
+					</div>
 				</section>
 			</article>
 		</main>
-		<footer class="px-6 md:px-16 lg:px-24 xl:px-32 w-full text-sm text-slate-400 mt-40">
+
+		<!-- Footer Section -->
+		<footer
+			class="px-3 md:px-16 lg:px-24 xl:px-32 w-full text-sm text-slate-400 mt-40"
+		>
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
 				<div class="sm:col-span-2 lg:col-span-1">
-					<a href="https://prebuiltui.com?utm_source=agentix">
-						<img class="h-9 w-auto" width="138" height="36" alt="logo" src="./assets/logo.svg">
+					<a href="./index.html">
+						<img
+							class="h-9 w-auto"
+							width="138"
+							height="36"
+							alt="logo"
+							src="./assets/logo.svg"
+						/>
 					</a>
 					<p class="text-sm/7 mt-6">
-						Todos nuetros diseños estan libres en caso de que te gusten o quieres empezar a ver com estan formadas
-						nuestras web
+						Todos nuestros diseños están libres en caso de que te gusten o
+						quieres empezar a ver com están formadas nuestras web
 					</p>
 				</div>
 				<div class="flex flex-col lg:items-center lg:justify-center">
 					<div class="flex flex-col text-sm space-y-2.5">
-						<h2 class="font-semibold mb-5 text-white">Compañia</h2>
-						<a class="hover:text-slate-500 transition" href="./index.html">
-							Inicio
+						<h2 class="font-semibold mb-5 text-white">Company</h2>
+						<a class="hover:text-slate-500 transition" href="./index.html"> Inicio </a>
+						<a class="hover:text-slate-500 transition" href="https://wa.me/541134229643?text=Hola, buen día. Me gustaría postularme para formar parte del equipo de desarrollo web. Tengo experiencia en desarrollo y me interesa contribuir con mis habilidades al crecimiento del proyecto. ¿Podría enviarles mi CV y portafolio?">
+							Equipo
+							<span
+								class="text-xs text-white bg-indigo-600 rounded-md ml-2 px-2 py-1"
+								>Postularme</span
+							>
 						</a>
-						<a class="hover:text-slate-500 transition" href="">
-							Equipo <span class="text-xs text-white bg-indigo-600 rounded-md ml-2 px-2 py-1">Postularme!</span>
-						</a>
-						<a class="hover:text-slate-500 transition" href="https://wa.me/541134229643">
-							Cantacto
-						</a>
-						<a class="hover:text-slate-500 transition" href="https://github.com/miush-env">
-							Github
+						<a class="hover:text-slate-500 transition" href="./index.html#contact"> Contacto </a>
+						<a class="hover:text-slate-500 transition" href="https://wa.me/541134229643?text=Hola%2C%20buen%20d%C3%ADa.%20Ya%20defin%C3%AD%20el%20concepto%2C%20funcionalidades%20y%20estilo%20de%20mi%20proyecto%20web.%20Me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20y%20conocer%20tiempos%20estimados%20de%20desarrollo%20para%20avanzar%20cuanto%20antes.">
+							Cotizar
 						</a>
 					</div>
 				</div>
-				<form action="https://formsubmit.co/350b7dc13efe4bc21484dcd047494b86" method="POST">
-					<h2 class="font-semibold text-white mb-5">Postulate para entrar a nuestro equipo</h2>
+				<div>
+					<h2 class="font-semibold text-white mb-5">
+						Acerca de nuestros planes de pago
+					</h2>
 					<div class="text-sm space-y-6 max-w-sm">
-						<p>Aplica para formar parte de nuestro quipo sin miedo todos son bienvenidos</p>
-						<div class="flex items-center justify-center gap-2 p-2 rounded-md bg-slate-900">
-							<input class="outline-none w-full max-w-64 py-2 rounded px-2" placeholder="Ingrese su email" type="email">
-							<button class="bg-indigo-600 px-4 py-2 text-white rounded">
-								Enviar
-							</button>
-						</div>
+						<p>
+							tener en cuenta que todos los medios de pago cuantan con una
+							garantia para mas seguridad
+						</p>
+						
 					</div>
-					<input type="hidden" name="_next" value="http://localhost:5173/#contact">
-					<input type="hidden" name="_captcha" value="false">
-				</form>
+				</div>
 			</div>
 			<p class="py-4 text-center border-t mt-6 border-slate-700">
-				2025 <a href="https://prebuiltui.com/">Miush-env</a>
+				Copyright 2025 © <a href="https://github.com/miush-env">Miush-env</a>
 			</p>
 		</footer>
 
